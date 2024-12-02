@@ -6,12 +6,12 @@ export function renderSearchForm() {
   searchInput.classList.add('search-input');
   searchInput.type = 'text';
   searchInput.id = 'search-input';
-  searchInput.placeholder = 'Image Search...';
+  searchInput.placeholder = 'Search images...';
 
   const searchButton = document.createElement('button');
   searchButton.classList.add('search-button');
   searchButton.type = 'submit';
-  searchButton.textContent = 'Поиск';
+  searchButton.textContent = 'Search';
 
   searchForm.appendChild(searchInput);
   searchForm.appendChild(searchButton);
@@ -85,12 +85,3 @@ export function renderImageCard(image) {
   return imageCard;
 }
 
-// const lightbox = new SimpleLightbox('.image-cards a', {
-//   overlayOpacity: 0,
-//   captionsData: 'alt',
-//   captionDelay: 250,
-//   className: 'simple-lightbox',
-// });
-
-
-// console.log(SimpleLightbox);

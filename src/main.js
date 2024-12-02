@@ -6,7 +6,6 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import iconReject from '../src/img/Group_rej.png';
 
-
 const main = document.querySelector('main');
 
 const searchForm = renderSearchForm();
@@ -54,8 +53,8 @@ searchForm.addEventListener('submit', event => {
             'Sorry, there are no images matching your search query. Please try again!',
           position: 'topRight',
           iconUrl: iconReject,
-        backgroundColor: '#EF4040',
-        messageColor: 'white',
+          backgroundColor: '#EF4040',
+          messageColor: 'white',
           timeout: 3000,
         });
       } else {
@@ -71,12 +70,13 @@ searchForm.addEventListener('submit', event => {
 
       console.error(error);
       iziToast.error({
-        title: 'Error',
         message: 'Error while receiving images!',
         position: 'topRight',
+        iconUrl: iconReject,
+        backgroundColor: '#EF4040',
+        messageColor: 'white',
         timeout: 3000,
       });
     });
   document.querySelector('#search-input').value = '';
 });
-
